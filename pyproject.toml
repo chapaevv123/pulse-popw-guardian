@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulse-popw-guardian"
+version = "0.1.0"
+description = "Deterministic, evidence-first PoPW verifier for Konnex"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Pulse PoPW Guardian contributors"}]
+dependencies = []
+
+[project.urls]
+Documentation = "https://docs.konnex.world/"
+
+[project.scripts]
+popw-guardian = "guardian.cli:main"
+popw-guardian-web = "guardian.web:main"
+
+[tool.setuptools.packages.find]
+include = ["guardian*"]
+
+[tool.setuptools.package-data]
+guardian = ["static/*"]

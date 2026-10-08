@@ -1,0 +1,27 @@
+{
+  "task": {
+    "task_id": "demo-success-001",
+    "instruction": "Move safely to the target and complete the route",
+    "started_at": "2026-01-01T12:00:00Z",
+    "completed_at": "2026-01-01T12:01:00Z",
+    "requirements": {
+      "required_evidence": ["video", "telemetry"],
+      "min_telemetry_samples": 3,
+      "target_duration_s": 75,
+      "expected_distance": 10,
+      "energy_budget": 20,
+      "safety_min": 70,
+      "final_min": 75,
+      "confidence_min": 0.75
+    }
+  },
+  "evidence": [
+    {"evidence_id": "vid-001", "type": "video", "source": "robot/camera/front", "payload": "video-proof-v1", "sha256": "3a548f8e22e04c22c09c356739ea58ea141de85fb8dc825e56fc426e6133fe82"},
+    {"evidence_id": "tel-001", "type": "telemetry", "source": "robot/odometry", "payload": "telemetry-proof-v1", "sha256": "e1f4432ce5aabc7021bc71367c86c46d555f7a65c194f574628fd17524c2d323"}
+  ],
+  "telemetry": [
+    {"timestamp": "2026-01-01T12:00:05Z", "progress": 0.1, "distance": 1, "energy": 2, "collisions": 0, "safety_violations": 0, "jitter": 0.05},
+    {"timestamp": "2026-01-01T12:00:30Z", "progress": 0.55, "distance": 5.5, "energy": 9, "collisions": 0, "safety_violations": 0, "jitter": 0.08},
+    {"timestamp": "2026-01-01T12:00:55Z", "progress": 1.0, "distance": 10, "energy": 16, "collisions": 0, "safety_violations": 0, "jitter": 0.04}
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "task": {
+    "task_id": "demo-incomplete-001",
+    "instruction": "Move safely to the target",
+    "started_at": "2026-01-01T12:00:00Z",
+    "completed_at": "2026-01-01T12:01:00Z",
+    "requirements": {"required_evidence": ["video", "telemetry"], "min_telemetry_samples": 3, "expected_distance": 10, "energy_budget": 20}
+  },
+  "evidence": [
+    {"evidence_id": "tel-003", "type": "telemetry", "source": "robot/odometry", "payload": "telemetry-proof-v1", "sha256": "e1f4432ce5aabc7021bc71367c86c46d555f7a65c194f574628fd17524c2d323"}
+  ],
+  "telemetry": [
+    {"timestamp": "2026-01-01T12:00:10Z", "progress": 0.2, "distance": 2, "energy": 3, "collisions": 0, "safety_violations": 0, "jitter": 0.1}
+  ]
+}

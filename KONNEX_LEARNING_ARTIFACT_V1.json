@@ -1,0 +1,32 @@
+{
+  "schema": "KONNEX_LEARNING_ARTIFACT_V1",
+  "project": "pulse-popw-guardian",
+  "artifact_version": "1.0.0",
+  "created_at": "2026-10-08T00:00:00+03:00",
+  "problem": "Physical-work claims need repeatable evidence checks before protocol submission or settlement.",
+  "approach": "Apply deterministic schema, provenance, temporal, trajectory, safety, coverage, metric, and confidence rules to an evidence bundle, then emit a content-bound audit receipt.",
+  "konnex_alignment": {
+    "official_metric_keys": ["accuracy", "speed", "safety", "optimal_track", "energy_efficiency", "trajectory_stability", "final_pct", "verdict"],
+    "local_extensions": ["confidence", "reason_codes", "checks", "provenance", "audit_receipt"],
+    "protocol_claim": "No claim that the local receipt is an on-chain ScoreRoot, validator consensus result, or accepted protocol proof."
+  },
+  "lessons": [
+    "Determinism requires deriving receipt time from evidence rather than wall-clock time.",
+    "Integrity and authenticity are different: a matching hash detects mutation but does not establish a trusted capture identity.",
+    "Missing evidence should be inconclusive; contradictory or tampered evidence should fail.",
+    "Protocol integrations should fail closed when release-specific parameters are unavailable."
+  ],
+  "reproduce": {
+    "runtime": "Python 3.10+",
+    "tests": "python -m unittest discover -s tests -v",
+    "success_demo": "python -m guardian.cli fixtures/valid_success.json --pretty",
+    "web_demo": "python -m guardian.web --host 127.0.0.1 --port 8080"
+  },
+  "safety": {
+    "wallet_transaction_executed": false,
+    "funds_spent": false,
+    "builder_application_submitted": false,
+    "validator_registration_required": false,
+    "miner_registration_required": false
+  }
+}
