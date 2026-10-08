@@ -1,54 +1,104 @@
-# Konnex Builder Submission Draft — Pulse PoPW Guardian
+# Konnex Builder Application — Copy-ready Draft
 
-> Draft only. The owner must review and submit it; this repository performs no application submission.
+> Owner review and submission required. No application has been submitted.
 
-## One-line pitch
+## Project / team name
 
-Pulse PoPW Guardian turns physical-work evidence into a deterministic, explainable verification result and content-bound audit receipt before it reaches a Konnex protocol boundary.
+Pulse PoPW Guardian
 
-## What is built
+## Role
 
-- Offline schema and provenance validation with SHA-256 tamper checks
-- Transparent evaluation of the six metrics in the official Konnex verifier schema
-- SUCCESS / FAILURE / INCONCLUSIVE outcomes with machine-readable reason codes
-- Confidence calculation, check-by-check diagnostics, and deterministic audit receipts
-- Three synthetic fixtures covering success, tamper failure, and insufficient evidence
-- Dependency-free local web demo, CLI, tests, and fail-closed Konnex adapter boundary
+Builder / Developer
 
-## Why it matters
+## One-line pitch (122 characters)
 
-PoPW systems need a clean separation between captured evidence, local validation, subnet-specific verification, and protocol publication. Guardian makes the first boundary inspectable and reproducible while avoiding claims that local heuristics equal validator consensus.
+Deterministic evidence verification for Konnex PoPW, with provenance, integrity gates, explainable verdicts, and receipts.
 
-## Demo
+## Category
 
-```bash
-python -m unittest discover -s tests -v
-python -m guardian.web --host 127.0.0.1 --port 8080
-```
+**Recommended:** Proof-of-Physical-Work / Verification Infrastructure
 
-Load each fixture in the UI and compare the verdict, confidence, reason codes, provenance state, and receipt ID.
+The current public application category list was not discoverable in official indexed sources. If the live form differs, select its closest exact option to **Developer Infrastructure**, **Verification**, or **Physical AI / PoPW**. Do not select validator operation unless the project actually begins operating a validator.
 
-## Konnex integration
+## Stage
 
-The output retains Konnex's documented six metric names and verdict concept. Guardian-specific diagnostics are namespaced by the local receipt envelope. The adapter intentionally refuses network writes until an owner supplies a confirmed official release, RPC/API endpoint, active subnet, wallet approval, and supported proof publication path.
+Working demo
 
-## Testnet proof plan
+## Demo link
 
-After owner approval: confirm the current release parameters in official materials, use a dedicated test wallet, obtain faucet-only tokens, submit a signed test task with the official SDK/CLI, attach the evidence bundle and Guardian receipt via the supported proof command, then record the job ID and explorer/protocol-visible transaction URL. No registration is required for the standalone MVP; validator or miner operation is a separate future decision.
+https://pulse-popw-guardian.vercel.app/
 
-## Current evidence
+## GitHub
 
-- Local deterministic verifier and demo: complete
-- Automated tests: complete
-- Public repository URL: https://github.com/chapaevv123/pulse-popw-guardian
-- Live demo URL: pending owner-authenticated hosting
-- Testnet transaction/explorer proof: pending owner wallet approval and confirmed active release parameters
+https://github.com/chapaevv123/pulse-popw-guardian
 
-## Links to insert before submission
+## Description
 
+Pulse PoPW Guardian is an evidence-first verification boundary for Konnex Proof of Physical Work. It checks whether physical-task evidence is complete, internally consistent, and unchanged before the result is trusted. It evaluates Konnex-aligned metrics, separates raw task performance from evidence integrity, and emits explainable `SUCCESS`, `FAILURE`, or `INCONCLUSIVE` verdicts with reproducible receipts.
+
+This matters for Physical AI because a high-performing task result is not trustworthy when its sensor or media evidence has been altered. Guardian makes that failure mode explicit: a tampered fixture retains its 97% raw score but receives a final `FAILURE` through an integrity hard gate.
+
+## Technical differentiation
+
+- Fully deterministic and offline: no hidden model, mutable state, or network dependency
+- SHA-256 evidence provenance and explicit tamper checks
+- Integrity hard gates independent from raw metric scoring
+- Six metrics aligned with the current Konnex verifier schema
+- Machine-readable reason codes, check traces, and confidence
+- Content-bound receipt IDs reproducible from the same input and rules
+- Fail-closed adapter: no invented network parameters or wallet actions
+
+## What is already built
+
+- Public Konnex-native demo and CLI
+- Evidence schema, provenance, temporal, trajectory, safety, and coverage checks
+- Success, tamper-failure, and incomplete-evidence fixtures
+- Explainable verdict console and deterministic audit receipts
+- Automated route, API, adapter, determinism, and verifier tests
+- MIT-licensed public repository and practical testnet proof runbook
+
+## What we want to build next on Konnex
+
+1. Bind normalized evidence and Guardian receipts to a genuine Konnex JobID.
+2. Implement the smallest release-specific PoPW bundle adapter from an official schema.
+3. Preserve protocol receipts and correlate validator/ScoreRoot results when a public interface is confirmed.
+4. Add signed device manifests or hardware-rooted evidence without weakening deterministic checks.
+
+## Why Konnex
+
+Konnex treats physical evidence, independent validation, and PoPW as core protocol concerns rather than application metadata. Guardian is designed for that boundary: deciding whether evidence is trustworthy enough to proceed from task performance toward protocol acceptance. Its deterministic channel also complements Konnex's documented two-tier validator design.
+
+## Team
+
+Owner/builder details to be entered by the owner. No people are inferred or invented.
+
+## Grant ask
+
+Do not enter a number unless required and owner-approved. If numeric input is mandatory, derive a milestone-based range after confirming program norms:
+
+- Milestone 1: official bundle/JobID adapter and testnet receipt capture
+- Milestone 2: ScoreRoot or validator-result correlation via a published interface
+- Milestone 3: signed capture provenance and end-to-end reference integration
+
+Base the amount on agreed deliverables, engineering time, and simulator/hardware costs—not an arbitrary headline figure.
+
+## Funding history
+
+To be completed by the owner. No funding history is asserted.
+
+## Current integration status
+
+**Implemented:** deterministic verification, public demo/API, fixtures, reason codes, integrity gates, and Guardian receipts.
+
+**Testnet-ready:** owner-controlled wallet/faucet setup and a safe discovery path for a genuine Konnex JobID/proof interface.
+
+**Not claimed:** on-chain Guardian receipt, protocol-accepted PoPW, published ScoreRoot, validator consensus, or miner/validator operation.
+
+## Proof links
+
+- Live demo: https://pulse-popw-guardian.vercel.app/
 - Repository: https://github.com/chapaevv123/pulse-popw-guardian
-- Live demo: `TBD`
-- Testnet/explorer proof: `TBD`
+- Testnet/protocol proof: pending owner-approved execution and official release parameters
 
 ## License
 
