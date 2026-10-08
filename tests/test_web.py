@@ -23,11 +23,16 @@ class WebTests(unittest.TestCase):
         with urlopen(self.base + "/", timeout=2) as response:
             page = response.read().decode("utf-8")
         self.assertIn("PoPW Guardian", page)
-        self.assertIn("FINAL VERDICT", page)
+        self.assertIn("Final verdict", page)
         self.assertIn("Integrity violation", page)
         self.assertIn("Raw task score: ", page)
         self.assertIn("EVIDENCE_TAMPER_SUSPECTED", page)
-        self.assertIn("integrityFailure?x.verdict:x.verdict+' · '+x.final_pct+'%'", page)
+        self.assertIn("integrityFailure?x.verdict:x.verdict+' \\u00b7 '+x.final_pct+'%'", page)
+        self.assertIn("Evidence-first verification for Konnex Proof of Physical Work", page)
+        self.assertIn("BUILT FOR KONNEX PoPW WORKFLOWS", page)
+        self.assertIn("A trust boundary for physical work.", page)
+        self.assertIn("How the trust boundary works", page)
+        self.assertIn("@media(max-width:600px)", page)
 
     def test_verify_endpoint(self):
         with urlopen(self.base + "/api/fixtures/valid_success", timeout=2) as response:
@@ -42,7 +47,10 @@ class WebTests(unittest.TestCase):
         expected = {
             "valid_success": ("SUCCESS", 95, []),
             "tampered_failure": ("FAILURE", 97, ["EVIDENCE_TAMPER_SUSPECTED"]),
-            "incomplete_inconclusive": ("INCONCLUSIVE", 58, None),
+            "incomplete_inconclusive": ("INCONCLUSIVE", 58, [
+                "EVIDENCE_MISSING", "INSUFFICIENT_EVIDENCE", "LOW_CONFIDENCE",
+                "TELEMETRY_INCOMPLETE", "VIDEO_MISSING",
+            ]),
         }
         for fixture, (verdict, score, exact_reasons) in expected.items():
             with self.subTest(fixture=fixture):
@@ -52,8 +60,7 @@ class WebTests(unittest.TestCase):
                 with urlopen(request, timeout=2) as response:
                     result = json.load(response)
                 self.assertEqual((result["verdict"], result["final_pct"]), (verdict, score))
-                if exact_reasons is not None:
-                    self.assertEqual(result["reason_codes"], exact_reasons)
+                self.assertEqual(result["reason_codes"], exact_reasons)
 
 if __name__ == "__main__":
     unittest.main()
