@@ -40,13 +40,13 @@ After owner approval: confirm the current release parameters in official materia
 
 - Local deterministic verifier and demo: complete
 - Automated tests: complete
-- Public repository URL: pending owner-authenticated GitHub publication
+- Public repository URL: https://github.com/chapaevv123/pulse-popw-guardian
 - Live demo URL: pending owner-authenticated hosting
 - Testnet transaction/explorer proof: pending owner wallet approval and confirmed active release parameters
 
 ## Links to insert before submission
 
-- Repository: `TBD`
+- Repository: https://github.com/chapaevv123/pulse-popw-guardian
 - Live demo: `TBD`
 - Testnet/explorer proof: `TBD`
 

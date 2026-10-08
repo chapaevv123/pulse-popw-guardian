@@ -1,5 +1,7 @@
 # Pulse PoPW Guardian
 
+[Public repository](https://github.com/chapaevv123/pulse-popw-guardian) · Live demo pending Vercel authentication
+
 Pulse PoPW Guardian is a deterministic, offline evidence verifier for Proof-of-Physical-Work demonstrations. It validates evidence structure and provenance, evaluates Konnex-aligned metrics, detects consistency and tamper failures, assigns confidence, and emits a stable audit receipt.
 
 It makes **no wallet calls**, submits **no transactions**, and requires neither miner nor validator registration. This repository contains synthetic public-safe examples only.
@@ -16,6 +18,12 @@ python -m guardian.web --host 127.0.0.1 --port 8080
 
 Open `http://127.0.0.1:8080`. The web demo uses only Python's standard library.
 An optional editable install is `python -m pip install --no-build-isolation -e .`; the no-build-isolation flag keeps setup offline when a compatible local setuptools is already present.
+
+## Public deployment
+
+The repository includes a native Vercel Python Function entry point in `api/index.py`. It reuses the exact local `BaseHTTPRequestHandler`; `vercel.json` routes the demo and JSON endpoints to that handler and explicitly bundles the fixtures. No environment variables or secrets are required.
+
+After authenticating the Vercel CLI, deploy from the repository root with `vercel --prod`. The permanent live URL will be recorded here after the first successful production deployment.
 
 ## Verification contract
 
