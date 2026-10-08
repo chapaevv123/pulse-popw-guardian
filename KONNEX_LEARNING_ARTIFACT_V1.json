@@ -1,7 +1,7 @@
 {
   "schema": "KONNEX_LEARNING_ARTIFACT_V1",
   "project": "pulse-popw-guardian",
-  "artifact_version": "1.1.0",
+  "artifact_version": "1.2.0",
   "created_at": "2026-10-08T00:00:00+03:00",
   "problem": "Physical-work claims need repeatable evidence checks before protocol submission or settlement.",
   "approach": "Apply deterministic schema, provenance, temporal, trajectory, safety, coverage, metric, and confidence rules to an evidence bundle, then emit a content-bound audit receipt.",
@@ -28,12 +28,20 @@
     "raw score versus trusted verdict separation",
     "reproducible audit receipts",
     "Physical AI evidence workflow framing",
-    "Konnex-specific visual and product adaptation"
+    "Konnex-specific visual and product adaptation",
+    "real protocol anchor recovery and evidence binding"
   ],
   "public_evidence": {
     "repository": "https://github.com/chapaevv123/pulse-popw-guardian",
     "demo": "https://pulse-popw-guardian.vercel.app/",
-    "stage": "working demo"
+    "stage": "working demo",
+    "real_protocol_anchor": {
+      "classification": "REAL_KONNEX_ONCHAIN_JOB_ANCHOR",
+      "block_number": 1223966,
+      "extrinsic_index": 1,
+      "full_popw_verified": false,
+      "score_root_verified": false
+    }
   },
   "reproduce": {
     "runtime": "Python 3.10+",

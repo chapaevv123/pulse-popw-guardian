@@ -1,0 +1,15 @@
+{
+  "case_type": "REAL_KONNEX_ONCHAIN_JOB_ANCHOR",
+  "network": "Konnex Testnet",
+  "block_number": 1223966,
+  "extrinsic_index": 1,
+  "extrinsic_hash": "0xd040f04905943078c20608267343f4fcf7cbfd6961fdebc121f096380aa8c035",
+  "signer": "5ERMCLtnV1k6Zsfrv6oNajnX2eNoS3pLevHBsNTr4SwhwqpW",
+  "nonce": 29,
+  "konnex_job_payload": "konnex-job:v1:4:0xc7705715657ab1dbde65c163678ac359bc4cead3f20eea38cb13a6319158a051",
+  "job_anchor": "0xc7705715657ab1dbde65c163678ac359bc4cead3f20eea38cb13a6319158a051",
+  "onchain_anchor": "VERIFIED",
+  "physical_evidence_verification": "AWAITING_OFFICIAL_EVIDENCE_BUNDLE",
+  "full_popw_verified": false,
+  "score_root_verified": false
+}

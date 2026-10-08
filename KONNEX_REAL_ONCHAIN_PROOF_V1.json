@@ -1,0 +1,33 @@
+{
+  "schema": "KONNEX_REAL_ONCHAIN_PROOF_V1",
+  "proof_classification": "REAL_KONNEX_ONCHAIN_JOB_ANCHOR",
+  "network": "Konnex Testnet",
+  "rpc": "wss://testnet-rpc1.konnex.world:39944",
+  "signer": "5ERMCLtnV1k6Zsfrv6oNajnX2eNoS3pLevHBsNTr4SwhwqpW",
+  "signer_account_id": "0x683711ed689718a7caf96986b3da1f9d4edaed10fc9e29d03926398f012fba4c",
+  "nonce": 29,
+  "block_number": 1223966,
+  "block_hash": "0x19888ed06a97247117edffc03c5f527311a25e0870b4b09e1c6baf298fdb8257",
+  "extrinsic_index": 1,
+  "extrinsic_hash": "0xd040f04905943078c20608267343f4fcf7cbfd6961fdebc121f096380aa8c035",
+  "konnex_job_payload": "konnex-job:v1:4:0xc7705715657ab1dbde65c163678ac359bc4cead3f20eea38cb13a6319158a051",
+  "job_anchor": "0xc7705715657ab1dbde65c163678ac359bc4cead3f20eea38cb13a6319158a051",
+  "call_hex": "0x00000049016b6f6e6e65782d6a6f623a76313a343a307863373730353731353635376162316462646536356331363336373861633335396263346365616433663230656561333863623133613633313931353861303531",
+  "raw_extrinsic": "0xf9028400683711ed689718a7caf96986b3da1f9d4edaed10fc9e29d03926398f012fba4c01e4acfd67c93da0c670e607738d1002a18a00f691fcbfa0ec3fa37eb29a3b6855d9ae0ebfe50f58e946a0c4465ae8288aec050375aa854f97e2587d1a2bc29e82a401740000000049016b6f6e6e65782d6a6f623a76313a343a307863373730353731353635376162316462646536356331363336373861633335396263346365616433663230656561333863623133613633313931353861303531",
+  "status": {
+    "onchain_inclusion": "VERIFIED",
+    "owner_confirmation": "SUCCESSFULLY_CONFIRMED",
+    "phase_correlated_events": "NOT_PRESENT_IN_SOURCE_EVIDENCE",
+    "physical_evidence_verification": "AWAITING_OFFICIAL_EVIDENCE_BUNDLE",
+    "full_popw_verified": false,
+    "score_root_verified": false
+  },
+  "provenance": {
+    "source_file": "KONNEX_NONCE29_EXACT_MATCH.json",
+    "recovery_method": "Read-only JSON-RPC block scan over the owner-reported validity window; exact signed extrinsic matched by signer and nonce 29.",
+    "match_fields": ["signer", "nonce"],
+    "independently_checked_fields": ["block_number", "block_hash", "extrinsic_index", "extrinsic_hash", "signer", "nonce", "konnex_job_payload", "raw_extrinsic"],
+    "job_anchor_extraction": "Exact suffix following the konnex-job:v1:4: marker in the decoded payload."
+  },
+  "scope_boundary": "This proves a real owner-signed Konnex Testnet drone-request job anchor. It does not prove physical execution evidence, validator acceptance, a ScoreRoot, or complete PoPW."
+}

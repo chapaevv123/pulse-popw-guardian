@@ -56,6 +56,7 @@ This matters for Physical AI because a high-performing task result is not trustw
 - Explainable verdict console and deterministic audit receipts
 - Automated route, API, adapter, determinism, and verifier tests
 - MIT-licensed public repository and practical testnet proof runbook
+- A real owner-signed Konnex Testnet drone-request anchor recovered at block `1,223,966` and bound to Guardian as `REAL_KONNEX_ONCHAIN_JOB_ANCHOR`
 
 ## What we want to build next on Konnex
 
@@ -88,11 +89,11 @@ To be completed by the owner. No funding history is asserted.
 
 ## Current integration status
 
-**Implemented:** deterministic verification, public demo/API, fixtures, reason codes, integrity gates, and Guardian receipts.
+**Implemented:** deterministic verification, public demo/API, fixtures, reason codes, integrity gates, Guardian receipts, and evidence-level binding to a real Konnex Testnet job anchor.
 
 **Testnet-ready:** owner-controlled wallet/faucet setup and a safe discovery path for a genuine Konnex JobID/proof interface.
 
-**Not claimed:** on-chain Guardian receipt, protocol-accepted PoPW, published ScoreRoot, validator consensus, or miner/validator operation.
+**Not claimed:** full physical-evidence PoPW, an on-chain Guardian receipt, published ScoreRoot, validator consensus, or miner/validator operation.
 
 ## Proof links
 

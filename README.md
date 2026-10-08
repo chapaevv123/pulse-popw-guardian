@@ -4,6 +4,8 @@
 
 [Live demo](https://pulse-popw-guardian.vercel.app/) | [Public repository](https://github.com/chapaevv123/pulse-popw-guardian)
 
+**Real Konnex Testnet proof case:** Guardian is bound to an owner-signed drone-request anchor at block `1,223,966`, extrinsic `1`, with canonical proof classification `REAL_KONNEX_ONCHAIN_JOB_ANCHOR`. This verifies real protocol provenance, not physical execution, validator acceptance, or a ScoreRoot.
+
 Pulse PoPW Guardian is a deterministic trust boundary for Physical AI evidence. It validates evidence completeness and provenance, detects tampering and inconsistent telemetry, evaluates the six metrics documented by Konnex, applies integrity gates, and emits explainable verdicts with reproducible audit receipts.
 
 ## Why it exists
@@ -27,6 +29,7 @@ Guardian makes that pre-protocol boundary inspectable. A task can score highly o
 - Confidence, check diagnostics, and content-bound reproducible audit receipts
 - CLI, public web demo, synthetic fixtures, Vercel adapter, and automated tests
 - Fail-closed Konnex integration boundary with no wallet or network writes
+- Real Konnex Testnet job-anchor parsing, provenance display, and evidence-binding boundary
 
 ## Testnet-ready / next integration
 
